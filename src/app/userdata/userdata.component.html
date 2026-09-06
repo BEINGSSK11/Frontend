@@ -1,0 +1,22 @@
+<h3>Welcome User!!</h3>
+<p>{{msg | titlecase}}</p>
+<!-- <p *ngIf="trigger">True</p>
+<p *ngIf="!trigger">False</p> -->
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Role</td>
+        <td>Email</td>
+        <td>Action</td>
+    </tr>
+    <tr *ngFor="let d of userdata ; trackBy: trackByUserId">
+        <td>{{d.id}}</td>
+        <td>{{d.name}}</td>
+        <td>{{d.role}}</td>
+        <td>{{d.email}}</td>
+        <td><button (click)="handleDelete(d.id)">Delete</button></td>
+    </tr>
+</table>
+
+<input type="text" numbersInp />
